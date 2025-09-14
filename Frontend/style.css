@@ -1,4 +1,4 @@
-/* Fade-in animation for both header and card */
+Fade-in animation for both header and card
 .fade-in {
   animation: fadeIn 1s ease-in forwards;
 }
