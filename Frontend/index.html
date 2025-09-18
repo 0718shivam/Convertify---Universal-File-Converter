@@ -1,6 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convertify - Universal File Converter</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans relative">
+
+
+  <!-- Grid Background -->
+  <div class="absolute inset-0 grid-bg"></div>
+
+  <!-- Navbar -->
+<nav class="flex justify-between items-center p-6 shadow-md bg-white fixed w-full top-0 z-20">
+  <div class="flex items-center space-x-4">
+    
+    <!-- Haburger menu layout -->
+    <button
+      type="button"
+      onclick="toggleMenu()"
+      class="text-3xl text-purple-600 p-2 z-50 relative"
+      style="display: block; visibility: visible;"
+    >
+      ☰
+    </button>
+    <h1 class="text-2xl font-bold text-purple-600">Convertify</h1>
+  </div>
+
+  <div class="hidden md:flex space-x-6 font-medium">
+    <a href="#features" class="hover:text-purple-400 transition">Conversions</a>
+    <a href="#stats" class="hover:text-purple-400 transition">History</a>
+    <a href="#account" class="hover:text-purple-400 transition">Account</a>
+  </div>
+</nav>
+
+  <!-- Side Drawer -->
+  <div id="sideMenu" class="hidden fixed top-0 right-0 w-72 h-full bg-white shadow-lg z-30 p-6">
+    
+    <button type="button" onclick="toggleMenu()" class="text-2xl mb-4">✖</button>
+    <h2 class="text-lg font-semibold text-purple-600 mb-4">File Conversion Options</h2>
+    <ul class="space-y-3 text-gray-700">
+      <li>📄 PDF → Word</li>
+      <li>📝 Word → PDF</li>    
+      <li>📊 PDF → Excel</li>
+      <li>📈 Excel → PDF</li>
+      <li>🎥 PDF → PowerPoint</li>
+      <li>📑 PowerPoint → PDF</li>
+      <li>🖼 PDF → Image</li>
+      <li>🖼 Image → PDF</li>
+      <li>📊 Excel ↔ CSV</li>
+    </ul>
+  </div>
+
+  <section class="pt-32 text-center relative z-10">
+  <h2 class="text-5xl md:text-6xl font-bold text-purple-600 mb-6 fade-in">Convertify</h2>
+
+  <h4 class="text-2xl md:text-4xl font-bold text-purple-600 mb-6 fade-in">Universal File Converter</h4>
+
+  <p class="text-lg text-gray-500 mb-10 leading-relaxed fade-in-delay">
+    Professional file converter with advanced OCR technology.<br>
+    Transform any document instantly with enterprise-grade security.
+  </p>
+
+  <br></br>
+
+  <a href="#features" class="glow-btn inline-flex items-center px-8 py-3 rounded-full text-white font-semibold">
+    Explore Features →
+  </a>
+</section>
+<br></br>
+<br></br>
+
+  <!-- Feature Cards Section -->
+<section class="p-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center relative z-10">
+  <!-- Lightning Fast -->
+  <div id="cardColor" class="feature-card bg-white rounded-2xl p-8 shadow-lg hover:ring-4 hover:ring-purple-400 transition transform hover:-translate-y-2">
+    <div class="flex justify-center mb-4 text-purple-600 text-5xl">
+      <i class="fas fa-bolt"></i>
+    </div>
+    <h3 class="text-xl font-bold mb-2">Lightning Fast</h3>
+    <p class="text-gray-600">Convert files in seconds with optimized performance.</p>
+  </div>
+
+  <!-- Bank-Level Security -->
+  <div id="cardColor" class="feature-card bg-white rounded-2xl p-8 shadow-lg hover:ring-4 hover:ring-purple-400 transition transform hover:-translate-y-2">
+    <div class="flex justify-center mb-4 text-purple-600 text-5xl">
+      <i class="fas fa-lock"></i>
+    </div>
+    <h3 class="text-xl font-bold mb-2">Bank-Level Security</h3>
+    <p class="text-gray-600">Your data is encrypted and handled with utmost privacy.</p>
+  </div>
+
+  <!-- OCR Technology -->
+  <div id="cardColor" class="feature-card bg-white rounded-2xl p-8 shadow-lg hover:ring-4 hover:ring-purple-400 transition transform hover:-translate-y-2">
+    <div class="flex justify-center mb-4 text-purple-600 text-5xl">
+      <i class="fas fa-file-alt"></i>
+    </div>
+    <h3 class="text-xl font-bold mb-2">OCR Technology</h3>
+    <p class="text-gray-600">Extract and recognize text from scanned files and images.</p>
+  </div>
+</section>
+
+
+  <!-- Features Section -->
+  <section id="features" class="grid md:grid-cols-3 gap-8 p-10 max-w-6xl mx-auto mt-16 relative z-10">
+    <!-- Card 1 -->
+    <div class="card bg-white rounded-2xl p-6 shadow-md cursor-pointer">
+      <h3 class="text-xl font-bold text-purple-600 mb-4">PDF Conversions</h3>
+      <ul class="space-y-2 text-gray-600">
+        <li>PDF → Word (DOCX)</li>
+        <li>PDF → Excel (XLSX)</li>
+        <li>PDF → PowerPoint</li>
+        <li>PDF → Images</li>
+      </ul>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card bg-white rounded-2xl p-6 shadow-md cursor-pointer">
+      <h3 class="text-xl font-bold text-purple-600 mb-4">Office Formats</h3>
+      <ul class="space-y-2 font-semitext-gray-600">
+        <li>Excel ↔ CSV</li>
+        <li>Word → HTML</li>
+        <li>PowerPoint → PDF</li>
+        <li>Cross-format support</li>
+      </ul>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card bg-white rounded-2xl p-6 shadow-md cursor-pointer">
+      <h3 class="text-xl font-bold text-purple-600 mb-4">OCR Technology</h3>
+      <ul class="space-y-2 text-gray-600">
+        <li>Extract text from PDFs</li>
+        <li>Read text from images</li>
+        <li>Multi-language support</li>
+        <li>95%+ accuracy rate</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section id="stats" class="grid md:grid-cols-3 gap-8 p-10 max-w-6xl mx-auto text-center mt-16 relative z-10">
+
+    <div class="stat-card bg-white rounded-xl p-8 shadow-md">
+      <h3 class="text-4xl font-bold text-purple-600 counter" data-target="8436">0</h3>
+      <p class="text-gray-600 mt-2">Files Converted</p>
+    </div>
+    <div class="stat-card bg-white rounded-xl p-8 shadow-md">
+      <h3 class="text-4xl font-bold text-purple-600 counter" data-target="98.35">0</h3>
+      <p class="text-gray-600 mt-2">Success Rate</p>
+    </div>
+    <div class="stat-card bg-white rounded-xl p-8 shadow-md">
+      <h3 class="text-4xl font-bold text-purple-600 counter" data-target="30">0</h3>
+      <p class="text-gray-600 mt-2">Avg. Processing (s)</p>
+    </div>
+  </section>
+
+    <!-- CTA Section -->
+  <section class="p-10 flex justify-center relative z-10">
+
+    <div class="cta-card bg-white rounded-2xl p-10 shadow-lg text-center max-w-3xl">
+      
+        <h2 class="text-3xl font-bold text-purple-600 mb-4">Ready to convert your files?</h2>
+      
+      <p class="text-lg text-gray-500 mb-10 leading-relaxed fade-in-delay">
+        Click the hamburger menu above to choose your conversion type and get started in seconds.
+      </p>
+      <a href="#features" class="glow-btn inline-flex items-center px-8 py-3 rounded-full text-white font-semibold">
+        Start Converting Now <span class="ml-2">➜</span>
+      </a>
+    </div>
+  </section>
+
+
+  <br></br>
+  <br></br>
+
+
+  <!-- Footer -->
+  <footer class="text-center p-6 mt-10 bg-gray-300 relative z-10">
+    <p class="font-semibold">&copy; 2025 Convertify - "Universal File Converter" All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->   
+  <script src="script.js"></script>
+
+  <script>
+  console.log("Script loaded");
+  </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <title>Convertify - Universal File Converter</title>
   
@@ -9,7 +210,7 @@
   <script src="https://cdn.tailwindcss.com"></script> 
 </head>
 
-<body class="bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 min-h-screen flex flex-col items-center justify-center">
+<body class="bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 min-h-screen flex flex-col items-center justify-center"> -->
 
 <!-- Main color themes :
 
@@ -24,16 +225,16 @@ from-orange-400 via-pink-500 to-rose-600
 
   <!-- Title & Tagline Section -->
 
-  <header class="text-center mb-12 fade-in">
+  <!-- <header class="text-center mb-12 fade-in">
     <h1 class="text-4xl font-bold text-white mb-2">Convertify - Universal File Converter</h1>
     <p class="text-xl text-white/90">Seamless file conversions made easy</p>
-  </header>
+  </header> -->
 
 
 
   <!-- File Conversion Card --> 
 
-  <div class="bg-gray-100 p-7 rounded-2xl shadow-lg w-full max-w-lg transform transition duration-600 hover:scale-105 fade-in">
+  <!-- <div class="bg-gray-100 p-7 rounded-2xl shadow-lg w-full max-w-lg transform transition duration-600 hover:scale-105 fade-in">
     
     <form action="/convert" method="post" enctype="multipart/form-data" class="space-y-4">
       
@@ -69,5 +270,5 @@ from-orange-400 via-pink-500 to-rose-600
   </div>
 
 </body>
-</html>
+</html> -->
 

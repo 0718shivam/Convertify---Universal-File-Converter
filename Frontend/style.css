@@ -1,4 +1,97 @@
-Fade-in animation for both header and card
+/* Background grid */
+.grid-bg {
+  background-image: linear-gradient(to right, rgba(180, 180, 255, 0.2) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(117, 117, 182, 0.2) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: moveGrid 20s linear infinite;
+  z-index: 0;
+  position: absolute;
+  inset: 0;
+  pointer-events: none; /* Prevents it from blocking clicks */
+}
+@keyframes moveGrid {
+  from { background-position: 0 0; }
+  to { background-position: 40px 40px; }
+}
+
+
+#sideMenu {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+#sideMenu.open {
+  transform: translateX(0);
+}
+
+
+/* Feature Cards Glow Effect */
+.feature-card {
+  border: 2px solid rgba(138, 43, 226, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+.feature-card:hover {
+  border-color: rgba(138, 43, 226, 0.4);
+  box-shadow: 0 0 25px rgba(138, 43, 226, 0.3);
+}
+
+
+/* Glow effect on cards */
+.card {
+  transition: all 0.3s ease-in-out;
+}
+.card:hover {
+  box-shadow: 0 10px 35px rgba(73, 11, 132, 0.829);
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* New Card */
+/* CTA Card Glow */
+.cta-card {
+  border: 2px solid rgba(138, 43, 226, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+.cta-card:hover {
+  box-shadow: 0 0 50px rgba(121, 9, 225, 0.878);
+  transform: translateY(-5px);
+}
+
+/* Glowing Button */
+.glow-btn {
+  background: linear-gradient(90deg, #7e22ce, #810dec);
+  box-shadow: 0 0 25px rgba(138, 43, 226, 0.7);
+  transition: all 0.3s ease-in-out;
+}
+.glow-btn:hover {
+  background: linear-gradient(90deg, #3f09d1, #5b05dc);
+  box-shadow: 0 0 25px rgba(97, 6, 188, 0.9);
+  transform: scale(1.05);
+}
+
+
+/* Side menu */
+#sideMenu {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+#sideMenu.open {
+  transform: translateX(0);
+}
+
+/* Fade-in animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+.fade-in-delay {
+  opacity: 0;
+  animation: fadeInUp 1s 0.5s forwards;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade-in animation for both header and card
 .fade-in {
   animation: fadeIn 1s ease-in forwards;
 }
@@ -6,4 +99,4 @@ Fade-in animation for both header and card
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
-}
+} */
