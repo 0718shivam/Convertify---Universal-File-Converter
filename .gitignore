@@ -10,3 +10,6 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+# npm files , node modules (npm init -y)
+node_modules/ 
+

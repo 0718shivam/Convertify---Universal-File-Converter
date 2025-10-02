@@ -1,0 +1,23 @@
+{
+  "name": "universal-file-converter",
+  "version": "1.0.0",
+  "description": "Universal file converter web app built with Python Flask, supporting PDF, Word, Excel, PPT, Images, and text conversions with a clean, user-friendly interface.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0718shivam/Convertify---Universal-File-Converter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0718shivam/Convertify---Universal-File-Converter/issues"
+  },
+  "homepage": "https://github.com/0718shivam/Convertify---Universal-File-Converter#readme",
+  "dependencies": {
+    "firebase": "^12.3.0"
+  }
+}
